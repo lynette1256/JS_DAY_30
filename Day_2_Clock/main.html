@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>day_2_clock</title>
+	<link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+	<div class="clock">
+		<div class="clock_surface">
+			<div class="hand hour_hand"></div>
+			<div class="hand minute_hand"></div>
+			<div class="hand second_hand"></div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		const secondHand = document.querySelector('.second_hand');
+		const minHand = document.querySelector('.minute_hand');
+		const hourHand = document.querySelector('.hour_hand');
+		console.log(secondHand);
+
+		function setDate() {
+			const now = new Date();
+			console.log(now);
+			const seconds = now.getSeconds();
+			const secondsDegrees = ((seconds / 60) * 360) + 90; /*秒针角度*/
+			console.log(secondsDegrees);
+			secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
+
+			const mins = now.getMinutes();
+			const minsDegrees = ((mins / 60) * 360) + 90; /*分针角度*/
+			console.log(minsDegrees);
+			minHand.style.transform = `rotate(${minsDegrees}deg)`;
+
+			const hour = now.getHours();
+			const hourDegrees = ((hour / 12) * 360) + 90; /*时针角度*/
+			console.log(hourDegrees);
+			hourHand.style.transform = `rotate(${hourDegrees}deg)`;
+
+			if(secondsDegrees === 90)
+				secondHand.style.transition = "all 0s";
+
+			if(minsDegrees === 90) 
+				secondHand.style.transition = "all 0s";
+		}
+
+		setInterval(setDate, 1000);
+		setDate();
+
+	</script>
+</body>
+</html>

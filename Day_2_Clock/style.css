@@ -1,0 +1,86 @@
+html {
+	background:  url(http://unsplash.it/1500/1000?image=881&blur=50);
+	background-size: cover;
+	text-align: center;
+	font-size: 10px;
+}
+
+body {
+	margin: 0;
+	font-size: 2rem;
+	display: flex;
+	flex: 1;
+	min-height: 100vh;
+	align-items: center;
+}
+
+.clock {
+	width: 30rem;
+	height: 30rem;
+	border: 2rem solid white;
+	border-radius: 50%;
+	margin: 5rem auto;
+	position: relative;
+	box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.clock_surface {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform: translateY(-3px);
+}
+
+.clock_surface::after {
+	width: 1em;
+	height: 1em;
+	left: 50%;
+	top: 50%;
+	position: absolute;
+	display: block;
+	transform: translate(-50%, -50%);
+	content: '';
+	border-radius: 50%;
+	background-color: white;
+
+}
+
+.hand {
+	width: 50%;
+	height: 6px;  /*指针宽度*/
+	background: #fff; /*指针颜色*/
+	position: absolute;  
+	top: 50%;  /*指针位置*/
+	right: 50%;  /*圆心位于整个表盘的中心*/
+	transform-origin: 100%;  /*定义新原点*/
+	transform: rotate(90deg);  /*顺时针旋转90°*/
+}
+
+.hour_hand {
+	width: 40%;
+	height: 10px;
+	border-top-left-radius: .5em;
+	border-bottom-left-radius: .5em;
+	transition: all 0.5s cubic-bezier(0.9, 0.54, 0.26, 1.68);
+	margin-top: -5px;
+}
+
+
+.minute_hand {
+	width: 45%;
+	height: 6px;
+	border-top-left-radius: .5em;
+	border-bottom-left-radius: .5em;
+	transition: all .1s cubic-bezier(0.9, 0.54, 0.26, 1.68);
+	margin-top: -3px;
+}
+
+.second_hand {
+	width: 48%;
+	height: 4px;
+	border-top-left-radius: 100%;
+	border-bottom-left-radius: 100%;
+	transition: all .05s cubic-bezier(0.9, 0.54, 0.26, 1.68);
+	margin-top: -2px;
+}
+
