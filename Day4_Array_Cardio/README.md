@@ -1,5 +1,0 @@
-#### filter
-
-#### map
-
-#### reduce 
