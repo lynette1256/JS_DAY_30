@@ -4,18 +4,14 @@
 
 * ` type = “range”`  可以显示进度条
 * <input type="range" value="0" max="100" min="0" step="5"/> 
-
 * ` type = “color” `
 用来创建一个允许用户使用颜色选择器，
 <input type="color" value="#8aa8af" id="base-color"/>
-
 * `：root` CSS伪类匹配文档树的根元素，选择器匹配文档根元素，在HTML中，根元素始终为HTML元素。
-
 * filter 修改图片的颜色  blur( px )给图片设置高斯模糊
 `img {filter:grayscale(100%) }`
-
 * <code> 在HTML中插入代码块
-
+  
 #### HTML5中的input
 input的type属性决定了input元素的类型，常见的有：hidden、text、password、checkbox、radio、file、submit、reset、image、button等，
 
@@ -49,9 +45,5 @@ https://blog.csdn.net/zwj1030711290/article/details/50265619
 #### ：root 全局声明 & CSS 变量
 * :root 伪元素匹配文档的根元素，即为`<html>`标签，用于声明全局CSS变量
 * CSS Variables，在全局`:root{}`伪类中定义一个CSS变量，形如`--spacing`命名CSS Variables。使用时，`padding:var(--spacing)`
-
-
-
-
 
 
