@@ -25,7 +25,6 @@ input的type属性决定了input元素的类型，常见的有：hidden、text�
 https://www.zhangxinxu.com/wordpress/2011/06/html5%E8%87%AA%E5%AE%9A%E4%B9%89%E5%B1%9E%E6%80%A7%E5%AF%B9%E8%B1%A1dataset%E7%AE%80%E4%BB%8B/
 
 使用 `data-` 前缀设置需要的自定义属性，来进行一些数据的存放。
-
 ```
 <div id="day2-meal-expense" 
   data-drink="coffee" 
@@ -47,6 +46,9 @@ element.style.setProperty('height', '300px', 'important');
 > 
 https://blog.csdn.net/zwj1030711290/article/details/50265619
 
+#### ：root 全局声明 & CSS 变量
+* :root 伪元素匹配文档的根元素，即为`<html>`标签，用于声明全局CSS变量
+* CSS Variables，在全局`:root{}`伪类中定义一个CSS变量，形如`--spacing`命名CSS Variables。使用时，`padding:var(--spacing)`
 
 
 
